@@ -25,8 +25,8 @@ function pageLaunch() {
   });
 }
 
-function selectClient() {
-    fetch(`https://ens.a2hosted.com/client-control-host/clients/`) 
+function selectClient(data) {
+    fetch(`https://ens.a2hosted.com/client-control-host/clients/${data}`) 
   .then(response => { 
     if (response.ok) { 
       return response.json(); // Parse the response data as JSON 
@@ -35,10 +35,17 @@ function selectClient() {
     } 
   }) 
   .then(data => {
-    
+    singleGrab = data;
+    fillForm();
   }) 
   .catch(error => { 
     // Handle any errors here 
     console.error(error); // Example: Logging the error to the console 
   });
+}
+
+function fillForm() {
+    const fullFormWrap = document.getElementById('fullForm');
+
+    
 }

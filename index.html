@@ -14,7 +14,10 @@
         <h1>Consolidated Client Control Center</h1>
     </header>
     <div class="selectOpt">
-        <form onsubmit="selectClient()">
+        <script>
+        let Cid
+        </script>
+        <form onsubmit="event.preventDefault(), getId(), selectClient(cId) ">
             <label for="clients">Select a client:</label>
 
             <select name="clients" id="clients">
@@ -22,8 +25,15 @@
             </select>
             <input type="submit" value="Submit" />
         </form>
+        <form id="fullForm"></form>
     </div>
     <script src="js/index.js"></script>
     <script>pageLaunch()</script>
+    <script>
+        function getId() {
+            const clientOpt = document.getElementById('clients')
+            cId = clientOpt.value
+        }
+    </script>
 </body>
 </html>
