@@ -1,6 +1,9 @@
-html, * {
+html {
     font-size: 62.5%;
     box-sizing: border-box;
+}
+
+* {
     margin: 0;
 }
 
@@ -22,5 +25,16 @@ header h1 {
 }
 
 .selectOpt {
+    font-size: 2rem;
+    padding: 15px;
+    border-bottom: 6px ridge #555;
+}
+
+select {
+    margin: 15px;
+    font-size: 2rem;
+}
+
+input {
     font-size: 2rem;
 }

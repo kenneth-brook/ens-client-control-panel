@@ -6,7 +6,7 @@
 <meta name="keywords" content="">
 
 <link rel="stylesheet" href="css/index.css">
-<script src="js/index.js"></script>
+
 </head>
 <body>
     <header>
@@ -14,12 +14,16 @@
         <h1>Consolidated Client Control Center</h1>
     </header>
     <div class="selectOpt">
-        <label for="clients">Select a client:</label>
+        <form onsubmit="selectClient()">
+            <label for="clients">Select a client:</label>
 
-        <select name="clients" id="clients">
+            <select name="clients" id="clients">
             
-        </select>
+            </select>
+            <input type="submit" value="Submit" />
+        </form>
     </div>
+    <script src="js/index.js"></script>
     <script>pageLaunch()</script>
 </body>
 </html>
