@@ -51,6 +51,10 @@ function fillForm() {
     fullFormWrap.appendChild(formLable);
     formLable.innerText = `Data for: ${singleGrab.name} --- License Key: ${singleGrab.key}`;
 
+    const block1Title = document.createElement('h5');
+    fullFormWrap.appendChild(block1Title);
+    block1Title.innerText = "Client Contact Information"
+
     const block1 = document.createElement('div');
     fullFormWrap.appendChild(block1);
     block1.className = "formRow";
@@ -135,6 +139,10 @@ function fillForm() {
     zipInput.setAttribute('id','zip');
     zipInput.value = `${singleGrab.zip}`;
 
+    const block2Title = document.createElement('h5');
+    fullFormWrap.appendChild(block2Title);
+    block2Title.innerText = "Account Controls"
+
     const block2 = document.createElement('div');
     fullFormWrap.appendChild(block2);
     block2.className = "formRow";
@@ -159,4 +167,12 @@ function fillForm() {
       opt.innerHTML += data;
     })
     planInput.value = `${singleGrab.plan}`;
+
+    const block3Title = document.createElement('h5');
+    fullFormWrap.appendChild(block3Title);
+    block3Title.innerText = "Database Translation Key"
+
+    const block3 = document.createElement('div');
+    fullFormWrap.appendChild(block3);
+    block3.className = "formRow";
 }
