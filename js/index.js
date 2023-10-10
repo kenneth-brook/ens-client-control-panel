@@ -47,8 +47,6 @@ function selectClient(data) {
 function fillForm() {
     const fullFormWrap = document.getElementById('fullForm');
 
-    console.log(singleGrab)
-
     const formLable = document.createElement('h3');
     fullFormWrap.appendChild(formLable);
     formLable.innerText = `Data for: ${singleGrab.name} --- License Key: ${singleGrab.key}`;
@@ -121,12 +119,8 @@ function fillForm() {
     stateInput.setAttribute('id','state');
     stateInput.value = `${singleGrab.state}`;
 
-    const block2 = document.createElement('div');
-    fullFormWrap.appendChild(block2);
-    block2.className = "formRow";
-
     const zipInputWrap = document.createElement('div');
-    block2.appendChild(zipInputWrap);
+    block1.appendChild(zipInputWrap);
     zipInputWrap.className = "inputWrap";
 
     const zipLabel = document.createElement('label');
@@ -136,10 +130,14 @@ function fillForm() {
 
     const zipInput = document.createElement('input');
     zipInputWrap.appendChild(zipInput);
-    zipInput.zip = "zip";
+    zipInput.name = "zip";
     zipInput.type = "text";
     zipInput.setAttribute('id','zip');
     zipInput.value = `${singleGrab.zip}`;
+
+    const block2 = document.createElement('div');
+    fullFormWrap.appendChild(block2);
+    block2.className = "formRow";
 
     const planInputWrap = document.createElement('div');
     block2.appendChild(planInputWrap);
@@ -148,12 +146,17 @@ function fillForm() {
     const planLabel = document.createElement('label');
     planInputWrap.appendChild(planLabel);
     planLabel.for = "plan";
-    planLabel.innerText = "Subscription Plan:"
+    planLabel.innerText = "Subscription Plan:";
 
-    const planInput = document.createElement('input');
+    const optArray = ['<option value="bronze">Bronze</option>', '<option value="silver">Silver</option>', '<option value="gold">Gold</option>', '<option value="platinum">Platinum</option>']
+
+    const planInput = document.createElement('select');
     planInputWrap.appendChild(planInput);
-    planInput.plan = "plan";
-    planInput.type = "text";
+    planInput.name = "plan";
     planInput.setAttribute('id','plan');
+    optArray.forEach ((data) =>{
+      const opt = document.getElementById('plan');
+      opt.innerHTML += data;
+    })
     planInput.value = `${singleGrab.plan}`;
 }
