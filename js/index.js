@@ -55,7 +55,7 @@ function fillForm() {
 
     const block1 = document.createElement('div');
     fullFormWrap.appendChild(block1);
-    block1.className = "formWrow";
+    block1.className = "formRow";
 
     const nameInputWrap = document.createElement('div');
     block1.appendChild(nameInputWrap);
@@ -87,5 +87,73 @@ function fillForm() {
     addressInput.name = "address";
     addressInput.type = "text";
     addressInput.setAttribute('id','address');
-    addressInput.value = `${singleGrab.address}`
+    addressInput.value = `${singleGrab.address}`;
+
+    const cityInputWrap = document.createElement('div');
+    block1.appendChild(cityInputWrap);
+    cityInputWrap.className = "inputWrap";
+
+    const cityLabel = document.createElement('label');
+    cityInputWrap.appendChild(cityLabel);
+    cityLabel.for = "city";
+    cityLabel.innerText = "City:"
+
+    const cityInput = document.createElement('input');
+    cityInputWrap.appendChild(cityInput);
+    cityInput.name = "city";
+    cityInput.type = "text";
+    cityInput.setAttribute('id','city');
+    cityInput.value = `${singleGrab.city}`;
+
+    const stateInputWrap = document.createElement('div');
+    block1.appendChild(stateInputWrap);
+    stateInputWrap.className = "inputWrap";
+
+    const stateLabel = document.createElement('label');
+    stateInputWrap.appendChild(stateLabel);
+    stateLabel.for = "state";
+    stateLabel.innerText = "State:"
+
+    const stateInput = document.createElement('input');
+    stateInputWrap.appendChild(stateInput);
+    stateInput.name = "state";
+    stateInput.type = "text";
+    stateInput.setAttribute('id','state');
+    stateInput.value = `${singleGrab.state}`;
+
+    const block2 = document.createElement('div');
+    fullFormWrap.appendChild(block2);
+    block2.className = "formRow";
+
+    const zipInputWrap = document.createElement('div');
+    block2.appendChild(zipInputWrap);
+    zipInputWrap.className = "inputWrap";
+
+    const zipLabel = document.createElement('label');
+    zipInputWrap.appendChild(zipLabel);
+    zipLabel.for = "zip";
+    zipLabel.innerText = "Zip Code:"
+
+    const zipInput = document.createElement('input');
+    zipInputWrap.appendChild(zipInput);
+    zipInput.zip = "zip";
+    zipInput.type = "text";
+    zipInput.setAttribute('id','zip');
+    zipInput.value = `${singleGrab.zip}`;
+
+    const planInputWrap = document.createElement('div');
+    block2.appendChild(planInputWrap);
+    planInputWrap.className = "inputWrap";
+
+    const planLabel = document.createElement('label');
+    planInputWrap.appendChild(planLabel);
+    planLabel.for = "plan";
+    planLabel.innerText = "Subscription Plan:"
+
+    const planInput = document.createElement('input');
+    planInputWrap.appendChild(planInput);
+    planInput.plan = "plan";
+    planInput.type = "text";
+    planInput.setAttribute('id','plan');
+    planInput.value = `${singleGrab.plan}`;
 }
