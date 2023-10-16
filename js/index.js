@@ -139,6 +139,56 @@ function fillForm() {
     zipInput.setAttribute('id','zip');
     zipInput.value = `${singleGrab.zip}`;
 
+    const phoneInputWrap = document.createElement('div');
+    block1.appendChild(phoneInputWrap);
+    phoneInputWrap.className = "inputWrap";
+
+    const phoneLabel = document.createElement('label');
+    phoneInputWrap.appendChild(phoneLabel);
+    phoneLabel.for = "phone";
+    phoneLabel.innerText = "Phone Number:"
+
+    const phoneInput = document.createElement('input');
+    phoneInputWrap.appendChild(phoneInput);
+    phoneInput.name = "phone";
+    phoneInput.type = "text";
+    phoneInput.setAttribute('id','phone');
+    phoneInput.value = `${singleGrab.phone_number}`;
+
+    const emailInputWrap = document.createElement('div');
+    block1.appendChild(emailInputWrap);
+    emailInputWrap.className = "inputWrap";
+
+    const emailLabel = document.createElement('label');
+    emailInputWrap.appendChild(emailLabel);
+    emailLabel.for = "email";
+    emailLabel.innerText = "Email:"
+
+    const emailInput = document.createElement('input');
+    emailInputWrap.appendChild(emailInput);
+    emailInput.name = "email";
+    emailInput.type = "text";
+    emailInput.setAttribute('id','email');
+    emailInput.value = `${singleGrab.email}`;
+
+    const websiteInputWrap = document.createElement('div');
+    block1.appendChild(websiteInputWrap);
+    websiteInputWrap.className = "inputWrap";
+
+    const websiteLabel = document.createElement('label');
+    websiteInputWrap.appendChild(websiteLabel);
+    websiteLabel.for = "website";
+    websiteLabel.innerText = "Website Address:"
+
+    const websiteInput = document.createElement('input');
+    websiteInputWrap.appendChild(websiteInput);
+    websiteInput.name = "website";
+    websiteInput.type = "text";
+    websiteInput.setAttribute('id','website');
+    websiteInput.value = `${singleGrab.website}`;
+
+    /* END Client Contact Information */
+
     const block2Title = document.createElement('h5');
     fullFormWrap.appendChild(block2Title);
     block2Title.innerText = "Account Controls"
@@ -168,11 +218,25 @@ function fillForm() {
     })
     planInput.value = `${singleGrab.plan}`;
 
+    /* END Account Controls */
+
     const block3Title = document.createElement('h5');
     fullFormWrap.appendChild(block3Title);
-    block3Title.innerText = "Database Translation Key"
+    block3Title.innerText = "Database Controls"
 
     const block3 = document.createElement('div');
     fullFormWrap.appendChild(block3);
     block3.className = "formRow";
+
+    /* END Database Controls */
+
+    const block4Title = document.createElement('h5');
+    fullFormWrap.appendChild(block4Title);
+    block4Title.innerText = "Database Translation Key"
+
+    const block4 = document.createElement('div');
+    fullFormWrap.appendChild(block4);
+    block3.className = "formRow";
+
+    /* END Database Translation Key */
 }
