@@ -480,5 +480,41 @@ function fillForm() {
     crossstreetsInput.setAttribute('id','crossstreets');
     crossstreetsInput.value = `${singleGrab.crossstreets}`;
 
+    /* */
+
+    const enteredQueueInputWrap = document.createElement('div');
+    block4.appendChild(enteredQueueInputWrap);
+    enteredQueueInputWrap.className = "inputWrap";
+
+    const enteredQueueLabel = document.createElement('label');
+    enteredQueueInputWrap.appendChild(enteredQueueLabel);
+    enteredQueueLabel.for = "enteredQueue";
+    enteredQueueLabel.innerText = "Entered Queue:"
+
+    const enteredQueueInput = document.createElement('input');
+    enteredQueueInputWrap.appendChild(enteredQueueInput);
+    enteredQueueInput.name = "enteredQueue";
+    enteredQueueInput.type = "text";
+    enteredQueueInput.setAttribute('id','enteredQueue');
+    enteredQueueInput.value = `${singleGrab.entered_queue}`;
+
+    /* */
+
+    const dbIdInputWrap = document.createElement('div');
+    block4.appendChild(dbIdInputWrap);
+    dbIdInputWrap.className = "inputWrap";
+
+    const dbIdLabel = document.createElement('label');
+    dbIdInputWrap.appendChild(dbIdLabel);
+    dbIdLabel.for = "dbId";
+    dbIdLabel.innerText = "Id:"
+
+    const dbIdInput = document.createElement('input');
+    dbIdInputWrap.appendChild(dbIdInput);
+    dbIdInput.name = "dbId";
+    dbIdInput.type = "text";
+    dbIdInput.setAttribute('id','dbId');
+    dbIdInput.value = `${singleGrab.db_id}`;
+
     /* END Database Translation Key */
 }
