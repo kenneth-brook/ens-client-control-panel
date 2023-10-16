@@ -197,6 +197,29 @@ function fillForm() {
     fullFormWrap.appendChild(block2);
     block2.className = "formRow";
 
+    const activeInputWrap = document.createElement('div');
+    block2.appendChild(activeInputWrap);
+    activeInputWrap.className = "inputWrap";
+
+    const activeLabel = document.createElement('label');
+    activeInputWrap.appendChild(activeLabel);
+    activeLabel.for = "active";
+    activeLabel.innerText = "Subscription Active?:";
+
+    const activeArray = ['<option value="active">Active</option>', '<option value="inactive">Inactive</option>']
+
+    const activeInput = document.createElement('select');
+    activeInputWrap.appendChild(activeInput);
+    activeInput.name = "active";
+    activeInput.setAttribute('id','active');
+    activeArray.forEach ((data) =>{
+      const opt = document.getElementById('active');
+      opt.innerHTML += data;
+    })
+    activeInput.value = `${singleGrab.active}`;
+
+    /* */
+
     const planInputWrap = document.createElement('div');
     block2.appendChild(planInputWrap);
     planInputWrap.className = "inputWrap";
@@ -228,6 +251,135 @@ function fillForm() {
     fullFormWrap.appendChild(block3);
     block3.className = "formRow";
 
+    const dbSyncInputWrap = document.createElement('div');
+    block3.appendChild(dbSyncInputWrap);
+    dbSyncInputWrap.className = "inputWrap";
+
+    const dbSyncLabel = document.createElement('label');
+    dbSyncInputWrap.appendChild(dbSyncLabel);
+    dbSyncLabel.for = "dbSync";
+    dbSyncLabel.innerText = "DBSync?:";
+
+    const dbSyncArray = ['<option value="active">Active</option>', '<option value="inactive">Inactive</option>']
+
+    const dbSyncInput = document.createElement('select');
+    dbSyncInputWrap.appendChild(dbSyncInput);
+    dbSyncInput.name = "dbSync";
+    dbSyncInput.setAttribute('id','dbSync');
+    dbSyncArray.forEach ((data) =>{
+      const opt = document.getElementById('dbSync');
+      opt.innerHTML += data;
+    })
+    dbSyncInput.value = `${singleGrab.dbsync}`;
+
+    /* */
+
+    const rawDBAddressInputWrap = document.createElement('div');
+    block3.appendChild(rawDBAddressInputWrap);
+    rawDBAddressInputWrap.className = "inputWrap";
+
+    const rawDBAddressLabel = document.createElement('label');
+    rawDBAddressInputWrap.appendChild(rawDBAddressLabel);
+    rawDBAddressLabel.for = "rawDBAddress";
+    rawDBAddressLabel.innerText = "Raw Data Base Address:"
+
+    const rawDBAddressInput = document.createElement('input');
+    rawDBAddressInputWrap.appendChild(rawDBAddressInput);
+    rawDBAddressInput.name = "rawDBAddress";
+    rawDBAddressInput.type = "text";
+    rawDBAddressInput.setAttribute('id','rawDBAddress');
+    rawDBAddressInput.value = `${singleGrab.raw_server}`;
+
+    /* */
+
+    const rawDBUserInputWrap = document.createElement('div');
+    block3.appendChild(rawDBUserInputWrap);
+    rawDBUserInputWrap.className = "inputWrap";
+
+    const rawDBUserLabel = document.createElement('label');
+    rawDBUserInputWrap.appendChild(rawDBUserLabel);
+    rawDBUserLabel.for = "rawDBUser";
+    rawDBUserLabel.innerText = "Raw Data Base User:"
+
+    const rawDBUserInput = document.createElement('input');
+    rawDBUserInputWrap.appendChild(rawDBUserInput);
+    rawDBUserInput.name = "rawDBUser";
+    rawDBUserInput.type = "text";
+    rawDBUserInput.setAttribute('id','rawDBUser');
+    rawDBUserInput.value = `${singleGrab.raw_user}`;
+
+    /* */
+
+    const rawDBPassInputWrap = document.createElement('div');
+    block3.appendChild(rawDBPassInputWrap);
+    rawDBPassInputWrap.className = "inputWrap";
+
+    const rawDBPassLabel = document.createElement('label');
+    rawDBPassInputWrap.appendChild(rawDBPassLabel);
+    rawDBPassLabel.for = "rawDBPass";
+    rawDBPassLabel.innerText = "Raw Data Base Pass:"
+
+    const rawDBPassInput = document.createElement('input');
+    rawDBPassInputWrap.appendChild(rawDBPassInput);
+    rawDBPassInput.name = "rawDBPass";
+    rawDBPassInput.type = "password";
+    rawDBPassInput.setAttribute('id','rawDBPass');
+    rawDBPassInput.value = `${singleGrab.raw_pass}`;
+
+    /* */
+
+    const rawDBTableInputWrap = document.createElement('div');
+    block3.appendChild(rawDBTableInputWrap);
+    rawDBTableInputWrap.className = "inputWrap";
+
+    const rawDBTableLabel = document.createElement('label');
+    rawDBTableInputWrap.appendChild(rawDBTableLabel);
+    rawDBTableLabel.for = "rawDBTable";
+    rawDBTableLabel.innerText = "Raw Data Base Table:"
+
+    const rawDBTableInput = document.createElement('input');
+    rawDBTableInputWrap.appendChild(rawDBTableInput);
+    rawDBTableInput.name = "rawDBTable";
+    rawDBTableInput.type = "text";
+    rawDBTableInput.setAttribute('id','rawDBTable');
+    rawDBTableInput.value = `${singleGrab.raw_table}`;
+
+    /* */
+
+    const rawDBTypeInputWrap = document.createElement('div');
+    block3.appendChild(rawDBTypeInputWrap);
+    rawDBTypeInputWrap.className = "inputWrap";
+
+    const rawDBTypeLabel = document.createElement('label');
+    rawDBTypeInputWrap.appendChild(rawDBTypeLabel);
+    rawDBTypeLabel.for = "rawDBType";
+    rawDBTypeLabel.innerText = "Raw Data Base Type:"
+
+    const rawDBTypeInput = document.createElement('input');
+    rawDBTypeInputWrap.appendChild(rawDBTypeInput);
+    rawDBTypeInput.name = "rawDBType";
+    rawDBTypeInput.type = "text";
+    rawDBTypeInput.setAttribute('id','rawDBType');
+    rawDBTypeInput.value = `${singleGrab.db_type}`;
+
+    /* */
+
+    const transDBAddressInputWrap = document.createElement('div');
+    block3.appendChild(transDBAddressInputWrap);
+    transDBAddressInputWrap.className = "inputWrap";
+
+    const transDBAddressLabel = document.createElement('label');
+    transDBAddressInputWrap.appendChild(transDBAddressLabel);
+    transDBAddressLabel.for = "transDBAddress";
+    transDBAddressLabel.innerText = "Translation Data Base Address:"
+
+    const transDBAddressInput = document.createElement('input');
+    transDBAddressInputWrap.appendChild(transDBAddressInput);
+    transDBAddressInput.name = "transDBAddress";
+    transDBAddressInput.type = "text";
+    transDBAddressInput.setAttribute('id','transDBAddress');
+    transDBAddressInput.value = `${singleGrab.trans_db_loc}`;
+
     /* END Database Controls */
 
     const block4Title = document.createElement('h5');
@@ -236,7 +388,43 @@ function fillForm() {
 
     const block4 = document.createElement('div');
     fullFormWrap.appendChild(block4);
-    block3.className = "formRow";
+    block4.className = "formRow";
+
+    /* */
+
+    const agencyTypeInputWrap = document.createElement('div');
+    block4.appendChild(agencyTypeInputWrap);
+    agencyTypeInputWrap.className = "inputWrap";
+
+    const agencyTypeLabel = document.createElement('label');
+    agencyTypeInputWrap.appendChild(agencyTypeLabel);
+    agencyTypeLabel.for = "agencyType";
+    agencyTypeLabel.innerText = "Agency Type:"
+
+    const agencyTypeInput = document.createElement('input');
+    agencyTypeInputWrap.appendChild(agencyTypeInput);
+    agencyTypeInput.name = "agencyType";
+    agencyTypeInput.type = "text";
+    agencyTypeInput.setAttribute('id','agencyType');
+    agencyTypeInput.value = `${singleGrab.agency_type}`;
+
+    /* */
+
+    const battalionInputWrap = document.createElement('div');
+    block4.appendChild(battalionInputWrap);
+    battalionInputWrap.className = "inputWrap";
+
+    const battalionLabel = document.createElement('label');
+    battalionInputWrap.appendChild(battalionLabel);
+    battalionLabel.for = "battalion";
+    battalionLabel.innerText = "Battalion:"
+
+    const battalionInput = document.createElement('input');
+    battalionInputWrap.appendChild(battalionInput);
+    battalionInput.name = "battalion";
+    battalionInput.type = "text";
+    battalionInput.setAttribute('id','battalion');
+    battalionInput.value = `${singleGrab.battalion}`;
 
     /* END Database Translation Key */
 }
