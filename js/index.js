@@ -426,5 +426,59 @@ function fillForm() {
     battalionInput.setAttribute('id','battalion');
     battalionInput.value = `${singleGrab.battalion}`;
 
+    /* */
+
+    const dbCityInputWrap = document.createElement('div');
+    block4.appendChild(dbCityInputWrap);
+    dbCityInputWrap.className = "inputWrap";
+
+    const dbCityLabel = document.createElement('label');
+    dbCityInputWrap.appendChild(dbCityLabel);
+    dbCityLabel.for = "dbCity";
+    dbCityLabel.innerText = "City:"
+
+    const dbCityInput = document.createElement('input');
+    dbCityInputWrap.appendChild(dbCityInput);
+    dbCityInput.name = "dbCity";
+    dbCityInput.type = "text";
+    dbCityInput.setAttribute('id','dbCity');
+    dbCityInput.value = `${singleGrab.db_city}`;
+
+    /* */
+
+    const creationInputWrap = document.createElement('div');
+    block4.appendChild(creationInputWrap);
+    creationInputWrap.className = "inputWrap";
+
+    const creationLabel = document.createElement('label');
+    creationInputWrap.appendChild(creationLabel);
+    creationLabel.for = "creation";
+    creationLabel.innerText = "Creation:"
+
+    const creationInput = document.createElement('input');
+    creationInputWrap.appendChild(creationInput);
+    creationInput.name = "creation";
+    creationInput.type = "text";
+    creationInput.setAttribute('id','creation');
+    creationInput.value = `${singleGrab.creation}`;
+
+    /* */
+
+    const crossstreetsInputWrap = document.createElement('div');
+    block4.appendChild(crossstreetsInputWrap);
+    crossstreetsInputWrap.className = "inputWrap";
+
+    const crossstreetsLabel = document.createElement('label');
+    crossstreetsInputWrap.appendChild(crossstreetsLabel);
+    crossstreetsLabel.for = "crossstreets";
+    crossstreetsLabel.innerText = "Crossstreets:"
+
+    const crossstreetsInput = document.createElement('input');
+    crossstreetsInputWrap.appendChild(crossstreetsInput);
+    crossstreetsInput.name = "crossstreets";
+    crossstreetsInput.type = "text";
+    crossstreetsInput.setAttribute('id','crossstreets');
+    crossstreetsInput.value = `${singleGrab.crossstreets}`;
+
     /* END Database Translation Key */
 }
