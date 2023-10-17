@@ -516,5 +516,77 @@ function fillForm() {
     dbIdInput.setAttribute('id','dbId');
     dbIdInput.value = `${singleGrab.db_id}`;
 
+    /* */
+
+    const jurisdictionInputWrap = document.createElement('div');
+    block4.appendChild(jurisdictionInputWrap);
+    jurisdictionInputWrap.className = "inputWrap";
+
+    const jurisdictionLabel = document.createElement('label');
+    jurisdictionInputWrap.appendChild(jurisdictionLabel);
+    jurisdictionLabel.for = "jurisdiction";
+    jurisdictionLabel.innerText = "Jurisdiction:"
+
+    const jurisdictionInput = document.createElement('input');
+    jurisdictionInputWrap.appendChild(jurisdictionInput);
+    jurisdictionInput.name = "jurisdiction";
+    jurisdictionInput.type = "text";
+    jurisdictionInput.setAttribute('id','jurisdiction');
+    jurisdictionInput.value = `${singleGrab.jurisdiction}`;
+
+    /* */
+
+    const latitudeInputWrap = document.createElement('div');
+    block4.appendChild(latitudeInputWrap);
+    latitudeInputWrap.className = "inputWrap";
+
+    const latitudeLabel = document.createElement('label');
+    latitudeInputWrap.appendChild(latitudeLabel);
+    latitudeLabel.for = "latitude";
+    latitudeLabel.innerText = "Latitude:"
+
+    const latitudeInput = document.createElement('input');
+    latitudeInputWrap.appendChild(latitudeInput);
+    latitudeInput.name = "latitude";
+    latitudeInput.type = "text";
+    latitudeInput.setAttribute('id','latitude');
+    latitudeInput.value = `${singleGrab.latitude}`;
+
+    /* */
+
+    const locationInputWrap = document.createElement('div');
+    block4.appendChild(locationInputWrap);
+    locationInputWrap.className = "inputWrap";
+
+    const locationLabel = document.createElement('label');
+    locationInputWrap.appendChild(locationLabel);
+    locationLabel.for = "location";
+    locationLabel.innerText = "Location:"
+
+    const locationInput = document.createElement('input');
+    locationInputWrap.appendChild(locationInput);
+    locationInput.name = "location";
+    locationInput.type = "text";
+    locationInput.setAttribute('id','location');
+    locationInput.value = `${singleGrab.location}`;
+
+    /* */
+
+    const longitudeInputWrap = document.createElement('div');
+    block4.appendChild(longitudeInputWrap);
+    longitudeInputWrap.className = "inputWrap";
+
+    const longitudeLabel = document.createElement('label');
+    longitudeInputWrap.appendChild(longitudeLabel);
+    longitudeLabel.for = "longitude";
+    longitudeLabel.innerText = "Longitude:"
+
+    const longitudeInput = document.createElement('input');
+    longitudeInputWrap.appendChild(longitudeInput);
+    longitudeInput.name = "longitude";
+    longitudeInput.type = "text";
+    longitudeInput.setAttribute('id','longitude');
+    longitudeInput.value = `${singleGrab.longitude}`;
+
     /* END Database Translation Key */
 }
