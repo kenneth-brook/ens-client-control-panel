@@ -588,5 +588,167 @@ function fillForm() {
     longitudeInput.setAttribute('id','longitude');
     longitudeInput.value = `${singleGrab.longitude}`;
 
+    /* */
+
+    const incidentIDInputWrap = document.createElement('div');
+    block4.appendChild(incidentIDInputWrap);
+    incidentIDInputWrap.className = "inputWrap";
+
+    const incidentIDLabel = document.createElement('label');
+    incidentIDInputWrap.appendChild(incidentIDLabel);
+    incidentIDLabel.for = "incidentID";
+    incidentIDLabel.innerText = "Incident ID:"
+
+    const incidentIDInput = document.createElement('input');
+    incidentIDInputWrap.appendChild(incidentIDInput);
+    incidentIDInput.name = "incidentID";
+    incidentIDInput.type = "text";
+    incidentIDInput.setAttribute('id','incidentID');
+    incidentIDInput.value = `${singleGrab.master_incident_id}`;
+
+    /* */
+
+    const premiseInputWrap = document.createElement('div');
+    block4.appendChild(premiseInputWrap);
+    premiseInputWrap.className = "inputWrap";
+
+    const premiseLabel = document.createElement('label');
+    premiseInputWrap.appendChild(premiseLabel);
+    premiseLabel.for = "premise";
+    premiseLabel.innerText = "Premise:"
+
+    const premiseInput = document.createElement('input');
+    premiseInputWrap.appendChild(premiseInput);
+    premiseInput.name = "premise";
+    premiseInput.type = "text";
+    premiseInput.setAttribute('id','premise');
+    premiseInput.value = `${singleGrab.premise}`;
+
+    /* */
+
+    const priorityInputWrap = document.createElement('div');
+    block4.appendChild(priorityInputWrap);
+    priorityInputWrap.className = "inputWrap";
+
+    const priorityLabel = document.createElement('label');
+    priorityInputWrap.appendChild(priorityLabel);
+    priorityLabel.for = "priority";
+    priorityLabel.innerText = "Priority:"
+
+    const priorityInput = document.createElement('input');
+    priorityInputWrap.appendChild(priorityInput);
+    priorityInput.name = "priority";
+    priorityInput.type = "text";
+    priorityInput.setAttribute('id','priority');
+    priorityInput.value = `${singleGrab.priority}`;
+
+    /* */
+
+    const sequencenumberInputWrap = document.createElement('div');
+    block4.appendChild(sequencenumberInputWrap);
+    sequencenumberInputWrap.className = "inputWrap";
+
+    const sequencenumberLabel = document.createElement('label');
+    sequencenumberInputWrap.appendChild(sequencenumberLabel);
+    sequencenumberLabel.for = "sequencenumber";
+    sequencenumberLabel.innerText = "Sequencenumber:"
+
+    const sequencenumberInput = document.createElement('input');
+    sequencenumberInputWrap.appendChild(sequencenumberInput);
+    sequencenumberInput.name = "sequencenumber";
+    sequencenumberInput.type = "text";
+    sequencenumberInput.setAttribute('id','sequencenumber');
+    sequencenumberInput.value = `${singleGrab.sequencenumber}`;
+
+    /* */
+
+    const stackedInputWrap = document.createElement('div');
+    block4.appendChild(stackedInputWrap);
+    stackedInputWrap.className = "inputWrap";
+
+    const stackedLabel = document.createElement('label');
+    stackedInputWrap.appendChild(stackedLabel);
+    stackedLabel.for = "stacked";
+    stackedLabel.innerText = "Stacked:"
+
+    const stackedInput = document.createElement('input');
+    stackedInputWrap.appendChild(stackedInput);
+    stackedInput.name = "stacked";
+    stackedInput.type = "text";
+    stackedInput.setAttribute('id','stacked');
+    stackedInput.value = `${singleGrab.stacked}`;
+
+    /* */
+
+    const dbStateInputWrap = document.createElement('div');
+    block4.appendChild(dbStateInputWrap);
+    dbStateInputWrap.className = "inputWrap";
+
+    const dbStateLabel = document.createElement('label');
+    dbStateInputWrap.appendChild(dbStateLabel);
+    dbStateLabel.for = "dbState";
+    dbStateLabel.innerText = "State:"
+
+    const dbStateInput = document.createElement('input');
+    dbStateInputWrap.appendChild(dbStateInput);
+    dbStateInput.name = "dbState";
+    dbStateInput.type = "text";
+    dbStateInput.setAttribute('id','dbState');
+    dbStateInput.value = `${singleGrab.db_state}`;
+
+    /* */
+
+    const statusInputWrap = document.createElement('div');
+    block4.appendChild(statusInputWrap);
+    statusInputWrap.className = "inputWrap";
+
+    const statusLabel = document.createElement('label');
+    statusInputWrap.appendChild(statusLabel);
+    statusLabel.for = "status";
+    statusLabel.innerText = "Status:"
+
+    const statusInput = document.createElement('input');
+    statusInputWrap.appendChild(statusInput);
+    statusInput.name = "status";
+    statusInput.type = "text";
+    statusInput.setAttribute('id','status');
+    statusInput.value = `${singleGrab.status}`;
+
+    /* */
+
+    const statusdatetimeInputWrap = document.createElement('div');
+    block4.appendChild(statusdatetimeInputWrap);
+    statusdatetimeInputWrap.className = "inputWrap";
+
+    const statusdatetimeLabel = document.createElement('label');
+    statusdatetimeInputWrap.appendChild(statusdatetimeLabel);
+    statusdatetimeLabel.for = "statusdatetime";
+    statusdatetimeLabel.innerText = "Status Date Time:"
+
+    const statusdatetimeInput = document.createElement('input');
+    statusdatetimeInputWrap.appendChild(statusdatetimeInput);
+    statusdatetimeInput.name = "statusdatetime";
+    statusdatetimeInput.type = "text";
+    statusdatetimeInput.setAttribute('id','statusdatetime');
+    statusdatetimeInput.value = `${singleGrab.statusdatetime}`;
+
+    /* */
+
+    const typeInputWrap = document.createElement('div');
+    block4.appendChild(typeInputWrap);
+    typeInputWrap.className = "inputWrap";
+
+    const typeLabel = document.createElement('label');
+    typeInputWrap.appendChild(typeLabel);
+    typeLabel.for = "type";
+    typeLabel.innerText = "Type:"
+
+    const typeInput = document.createElement('input');
+    typeInputWrap.appendChild(typeInput);
+    typeInput.name = "type";
+    typeInput.type = "text";
+    typeInput.setAttribute('id','type');
+    typeInput.value = `${singleGrab.type}`;
+
     /* END Database Translation Key */
 }
