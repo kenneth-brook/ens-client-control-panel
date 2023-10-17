@@ -161,7 +161,7 @@ function fillForm() {
 
     const phoneInput = document.createElement('input');
     phoneInputWrap.appendChild(phoneInput);
-    phoneInput.name = "phone";
+    phoneInput.name = "phone_number";
     phoneInput.type = "text";
     phoneInput.setAttribute('id','phone');
     phoneInput.value = `${singleGrab.phone_number}`;
@@ -296,7 +296,7 @@ function fillForm() {
 
     const rawDBAddressInput = document.createElement('input');
     rawDBAddressInputWrap.appendChild(rawDBAddressInput);
-    rawDBAddressInput.name = "rawDBAddress";
+    rawDBAddressInput.name = "raw_server";
     rawDBAddressInput.type = "text";
     rawDBAddressInput.setAttribute('id','rawDBAddress');
     rawDBAddressInput.value = `${singleGrab.raw_server}`;
@@ -314,7 +314,7 @@ function fillForm() {
 
     const rawDBUserInput = document.createElement('input');
     rawDBUserInputWrap.appendChild(rawDBUserInput);
-    rawDBUserInput.name = "rawDBUser";
+    rawDBUserInput.name = "raw_user";
     rawDBUserInput.type = "text";
     rawDBUserInput.setAttribute('id','rawDBUser');
     rawDBUserInput.value = `${singleGrab.raw_user}`;
@@ -332,7 +332,7 @@ function fillForm() {
 
     const rawDBPassInput = document.createElement('input');
     rawDBPassInputWrap.appendChild(rawDBPassInput);
-    rawDBPassInput.name = "rawDBPass";
+    rawDBPassInput.name = "raw_pass";
     rawDBPassInput.type = "password";
     rawDBPassInput.setAttribute('id','rawDBPass');
     rawDBPassInput.value = `${singleGrab.raw_pass}`;
@@ -350,7 +350,7 @@ function fillForm() {
 
     const rawDBTableInput = document.createElement('input');
     rawDBTableInputWrap.appendChild(rawDBTableInput);
-    rawDBTableInput.name = "rawDBTable";
+    rawDBTableInput.name = "raw_table";
     rawDBTableInput.type = "text";
     rawDBTableInput.setAttribute('id','rawDBTable');
     rawDBTableInput.value = `${singleGrab.raw_table}`;
@@ -368,7 +368,7 @@ function fillForm() {
 
     const rawDBTypeInput = document.createElement('input');
     rawDBTypeInputWrap.appendChild(rawDBTypeInput);
-    rawDBTypeInput.name = "rawDBType";
+    rawDBTypeInput.name = "db_type";
     rawDBTypeInput.type = "text";
     rawDBTypeInput.setAttribute('id','rawDBType');
     rawDBTypeInput.value = `${singleGrab.db_type}`;
@@ -386,7 +386,7 @@ function fillForm() {
 
     const transDBAddressInput = document.createElement('input');
     transDBAddressInputWrap.appendChild(transDBAddressInput);
-    transDBAddressInput.name = "transDBAddress";
+    transDBAddressInput.name = "trans_db_loc";
     transDBAddressInput.type = "text";
     transDBAddressInput.setAttribute('id','transDBAddress');
     transDBAddressInput.value = `${singleGrab.trans_db_loc}`;
@@ -414,7 +414,7 @@ function fillForm() {
 
     const agencyTypeInput = document.createElement('input');
     agencyTypeInputWrap.appendChild(agencyTypeInput);
-    agencyTypeInput.name = "agencyType";
+    agencyTypeInput.name = "agency_type";
     agencyTypeInput.type = "text";
     agencyTypeInput.setAttribute('id','agencyType');
     agencyTypeInput.value = `${singleGrab.agency_type}`;
@@ -450,7 +450,7 @@ function fillForm() {
 
     const dbCityInput = document.createElement('input');
     dbCityInputWrap.appendChild(dbCityInput);
-    dbCityInput.name = "dbCity";
+    dbCityInput.name = "db_city";
     dbCityInput.type = "text";
     dbCityInput.setAttribute('id','dbCity');
     dbCityInput.value = `${singleGrab.db_city}`;
@@ -504,7 +504,7 @@ function fillForm() {
 
     const enteredQueueInput = document.createElement('input');
     enteredQueueInputWrap.appendChild(enteredQueueInput);
-    enteredQueueInput.name = "enteredQueue";
+    enteredQueueInput.name = "entered_queue";
     enteredQueueInput.type = "text";
     enteredQueueInput.setAttribute('id','enteredQueue');
     enteredQueueInput.value = `${singleGrab.entered_queue}`;
@@ -522,7 +522,7 @@ function fillForm() {
 
     const dbIdInput = document.createElement('input');
     dbIdInputWrap.appendChild(dbIdInput);
-    dbIdInput.name = "dbId";
+    dbIdInput.name = "db_id";
     dbIdInput.type = "text";
     dbIdInput.setAttribute('id','dbId');
     dbIdInput.value = `${singleGrab.db_id}`;
@@ -612,7 +612,7 @@ function fillForm() {
 
     const incidentIDInput = document.createElement('input');
     incidentIDInputWrap.appendChild(incidentIDInput);
-    incidentIDInput.name = "incidentID";
+    incidentIDInput.name = "master_incident_id";
     incidentIDInput.type = "text";
     incidentIDInput.setAttribute('id','incidentID');
     incidentIDInput.value = `${singleGrab.master_incident_id}`;
@@ -702,7 +702,7 @@ function fillForm() {
 
     const dbStateInput = document.createElement('input');
     dbStateInputWrap.appendChild(dbStateInput);
-    dbStateInput.name = "dbState";
+    dbStateInput.name = "db_state";
     dbStateInput.type = "text";
     dbStateInput.setAttribute('id','dbState');
     dbStateInput.value = `${singleGrab.db_state}`;
@@ -774,7 +774,7 @@ function fillForm() {
 
     const typeDescriptionInput = document.createElement('input');
     typeDescriptionInputWrap.appendChild(typeDescriptionInput);
-    typeDescriptionInput.name = "typeDescription";
+    typeDescriptionInput.name = "type_description";
     typeDescriptionInput.typeDescription = "text";
     typeDescriptionInput.setAttribute('id','typeDescription');
     typeDescriptionInput.value = `${singleGrab.type_description}`;
