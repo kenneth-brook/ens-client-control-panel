@@ -17,14 +17,15 @@
         <script>
         let Cid
         </script>
-        <form onsubmit="event.preventDefault(), getId(), selectClient(cId) ">
+        <form onsubmit="event.preventDefault(), getId(), selectClient(cId)">
             <label for="clients">Select a client:</label>
 
             <select name="clients" id="clients">
             
             </select>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Select" />
         </form>
+        <button id="flexButton" onclick="event.preventDefault(), newClient()">New Client</button>
     </div>
     <form id="fullForm"></form>
     <script src="js/index.js"></script>

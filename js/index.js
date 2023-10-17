@@ -1,4 +1,5 @@
 const clientList = document.getElementById('clients');
+const flexButton = document.getElementById('flexButton');
 let singleGrab = "";
 
 function pageLaunch() {
@@ -15,7 +16,6 @@ function pageLaunch() {
         let id = client.id;
         let name = client.name;
         let opItem = `<option value=${id}>${name}</option>`;
-        console.log(opItem)
         clientList.innerHTML += opItem;
     });
   }) 
@@ -42,6 +42,17 @@ function selectClient(data) {
     // Handle any errors here 
     console.error(error); // Example: Logging the error to the console 
   });
+
+  flexButton.innerText = "Update";
+  flexButton.onclick = function() {event.preventDefault(), updateClient()};
+}
+
+function newClient() {
+  alert('NEW MODE')
+}
+
+function updateClient() {
+  alert('updateMODE')
 }
 
 function fillForm() {
@@ -749,6 +760,42 @@ function fillForm() {
     typeInput.type = "text";
     typeInput.setAttribute('id','type');
     typeInput.value = `${singleGrab.type}`;
+
+    /* */
+
+    const typeDescriptionInputWrap = document.createElement('div');
+    block4.appendChild(typeDescriptionInputWrap);
+    typeDescriptionInputWrap.className = "inputWrap";
+
+    const typeDescriptionLabel = document.createElement('label');
+    typeDescriptionInputWrap.appendChild(typeDescriptionLabel);
+    typeDescriptionLabel.for = "typeDescription";
+    typeDescriptionLabel.innerText = "Type Description:"
+
+    const typeDescriptionInput = document.createElement('input');
+    typeDescriptionInputWrap.appendChild(typeDescriptionInput);
+    typeDescriptionInput.name = "typeDescription";
+    typeDescriptionInput.typeDescription = "text";
+    typeDescriptionInput.setAttribute('id','typeDescription');
+    typeDescriptionInput.value = `${singleGrab.type_description}`;
+
+    /* */
+
+    const zoneInputWrap = document.createElement('div');
+    block4.appendChild(zoneInputWrap);
+    zoneInputWrap.className = "inputWrap";
+
+    const zoneLabel = document.createElement('label');
+    zoneInputWrap.appendChild(zoneLabel);
+    zoneLabel.for = "zone";
+    zoneLabel.innerText = "Zone:"
+
+    const zoneInput = document.createElement('input');
+    zoneInputWrap.appendChild(zoneInput);
+    zoneInput.name = "zone";
+    zoneInput.zone = "text";
+    zoneInput.setAttribute('id','zone');
+    zoneInput.value = `${singleGrab.zone}`;
 
     /* END Database Translation Key */
 }
