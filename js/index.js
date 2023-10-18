@@ -1,5 +1,6 @@
 const clientList = document.getElementById('clients');
 const flexButton = document.getElementById('flexButton');
+const formPull = document.getElementById('fullForm');
 let singleGrab = "";
 
 function pageLaunch() {
@@ -44,15 +45,34 @@ function selectClient(data) {
   });
 
   flexButton.innerText = "Update";
-  flexButton.onclick = function() {event.preventDefault(), updateClient()};
+  flexButton.type = "submit"
+  flexButton.form = formPull;
+  flexButton.onclick = function() {event.preventDefault(), updateClient(formPull)};
 }
 
-function newClient() {
-  alert('NEW MODE')
+function newClient(form) {
+  console.log(form)
+  /*let formData = new FormData(form);
+  let object = {};
+  formData.forEach(function(value, key){
+    object[key] = value;
+  });
+  var json = JSON.stringify(object);
+  alert(json);
+
+  alert(JSON.stringify(Object.fromEntries(formData)));*/
 }
 
-function updateClient() {
-  alert('updateMODE')
+function updateClient(form) {
+  let formData = new FormData(form);
+  let object = {};
+  formData.forEach(function(value, key){
+    object[key] = value;
+  });
+  var json = JSON.stringify(object);
+  alert(json);
+
+  alert(JSON.stringify(Object.fromEntries(formData)));
 }
 
 function fillForm() {
