@@ -70,9 +70,8 @@ function updateClient(form) {
     object[key] = value;
   });
   var json = JSON.stringify(object);
-  alert(json);
 
-  alert(JSON.stringify(Object.fromEntries(formData)));
+  fetch()
 }
 
 function fillForm() {
