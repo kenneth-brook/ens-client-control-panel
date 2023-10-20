@@ -14,7 +14,7 @@ function pageLaunch() {
   }) 
   .then(data => {
     data.forEach((client) => {
-        let id = client.id;
+        let id = client.key;
         let name = client.name;
         let opItem = `<option value=${id}>${name}</option>`;
         clientList.innerHTML += opItem;
@@ -273,14 +273,14 @@ function newClient() {
 
     const dbSyncLabel = document.createElement('label');
     dbSyncInputWrap.appendChild(dbSyncLabel);
-    dbSyncLabel.for = "dbSync";
+    dbSyncLabel.for = "dbsync";
     dbSyncLabel.innerText = "DBSync?:";
 
     const dbSyncArray = ['<option value="active">Active</option>', '<option value="inactive">Inactive</option>']
 
     const dbSyncInput = document.createElement('select');
     dbSyncInputWrap.appendChild(dbSyncInput);
-    dbSyncInput.name = "dbSync";
+    dbSyncInput.name = "dbsync";
     dbSyncInput.setAttribute('id','dbSync');
     dbSyncArray.forEach ((data) =>{
       const opt = document.getElementById('dbSync');
@@ -785,6 +785,9 @@ function enterClient(formPull) {
   let formData = new FormData(formPull);
   let object = {};
   formData.forEach(function(value, key){
+    if (value == "") {
+      value = "XX";
+    }
     object[key] = value;
   });
   let json = JSON.stringify(object);
@@ -792,10 +795,10 @@ function enterClient(formPull) {
   console.log(json)
 
    // Send JSON object to the server
-   fetch(`https://ens.a2hosted.com/client-control-host/clients`, {
+   fetch("https://ens.a2hosted.com/client-control-host/clients", {
     method: 'POST',
     headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/JSON',
     },
     body: JSON.stringify(object),
 })
@@ -817,18 +820,17 @@ function updateClient(form) {
     object[key] = value;
   });
   let json = JSON.stringify(object);
-  let idForAddy = parseInt(object.id)
+  const lKey = singleGrab.key
 
-  console.log(idForAddy)
-  console.log(json)
+  console.log(lKey)
 
    // Send JSON object to the server
-   fetch(`https://ens.a2hosted.com/client-control-host/clients/${idForAddy}`, {
+   fetch(`https://ens.a2hosted.com/client-control-host/clients/${lKey}`, {
     method: 'PUT',
     headers: {
         'Content-Type': 'application/json',
     },
-    body: JSON.stringify(object),
+    body: json,
 })
 .then(response => response.json())
 .then(data => {
@@ -856,12 +858,12 @@ function fillForm() {
     fullFormWrap.appendChild(block1);
     block1.className = "formRow";
 
-    const idInput = document.createElement('input');
+    /*const idInput = document.createElement('input');
     block1.appendChild(idInput);
     idInput.name = "id";
     idInput.type = "hidden";
     idInput.setAttribute('id','id');
-    idInput.value = `${singleGrab.id}`;
+    idInput.value = `${singleGrab.id}`;*/
 
     const nameInputWrap = document.createElement('div');
     block1.appendChild(nameInputWrap);
@@ -1061,20 +1063,20 @@ function fillForm() {
 
     const dbSyncLabel = document.createElement('label');
     dbSyncInputWrap.appendChild(dbSyncLabel);
-    dbSyncLabel.for = "dbSync";
+    dbSyncLabel.for = "dbsync";
     dbSyncLabel.innerText = "DBSync?:";
 
     const dbSyncArray = ['<option value="active">Active</option>', '<option value="inactive">Inactive</option>']
 
-    const dbSyncInput = document.createElement('select');
-    dbSyncInputWrap.appendChild(dbSyncInput);
-    dbSyncInput.name = "dbSync";
-    dbSyncInput.setAttribute('id','dbSync');
+    const dbsyncInput = document.createElement('select');
+    dbSyncInputWrap.appendChild(dbsyncInput);
+    dbsyncInput.name = "dbsync";
+    dbsyncInput.setAttribute('id','dbsync');
     dbSyncArray.forEach ((data) =>{
-      const opt = document.getElementById('dbSync');
+      const opt = document.getElementById('dbsync');
       opt.innerHTML += data;
     })
-    dbSyncInput.value = `${singleGrab.dbsync}`;
+    dbsyncInput.value = `${singleGrab.dbsync}`;
 
     /* */
 
