@@ -1141,7 +1141,7 @@ function fillForm() {
     const rawDBTableLabel = document.createElement('label');
     rawDBTableInputWrap.appendChild(rawDBTableLabel);
     rawDBTableLabel.for = "rawDBTable";
-    rawDBTableLabel.innerText = "Raw Data Base Table:"
+    rawDBTableLabel.innerText = "Raw Data Base:"
 
     const rawDBTableInput = document.createElement('input');
     rawDBTableInputWrap.appendChild(rawDBTableInput);
@@ -1149,6 +1149,24 @@ function fillForm() {
     rawDBTableInput.type = "text";
     rawDBTableInput.setAttribute('id','rawDBTable');
     rawDBTableInput.value = `${singleGrab.raw_table}`;
+
+    /* */
+
+    const rawDBTableNameInputWrap = document.createElement('div');
+    block3.appendChild(rawDBTableNameInputWrap);
+    rawDBTableNameInputWrap.className = "inputWrap";
+
+    const rawDBTableNameLabel = document.createElement('label');
+    rawDBTableNameInputWrap.appendChild(rawDBTableNameLabel);
+    rawDBTableNameLabel.for = "rawDBTableName";
+    rawDBTableNameLabel.innerText = "Raw Table Name:"
+
+    const rawDBTableNameInput = document.createElement('input');
+    rawDBTableNameInputWrap.appendChild(rawDBTableNameInput);
+    rawDBTableNameInput.name = "raw_table_name";
+    rawDBTableNameInput.type = "text";
+    rawDBTableNameInput.setAttribute('id','rawDBTableName');
+    rawDBTableNameInput.value = `${singleGrab.raw_table_name}`;
 
     /* */
 
