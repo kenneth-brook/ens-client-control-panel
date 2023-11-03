@@ -4,7 +4,7 @@ const formPull = document.getElementById('fullForm');
 let singleGrab = "";
 
 function pageLaunch() {
-    fetch('https://ens.a2hosted.com/client-control-host/clients') 
+    fetch('https://client-control.911-ens-services.com:3333/clients') 
   .then(response => { 
     if (response.ok) { 
       return response.json(); // Parse the response data as JSON 
@@ -27,7 +27,7 @@ function pageLaunch() {
 }
 
 function selectClient(data) {
-    fetch(`https://ens.a2hosted.com/client-control-host/clients/${data}`) 
+    fetch(`https://clientcontrol.911emergensee.com:3333/clients/${data}`) 
   .then(response => { 
     if (response.ok) { 
       return response.json(); // Parse the response data as JSON 
@@ -790,12 +790,12 @@ function enterClient(formPull) {
     }
     object[key] = value;
   });
-  let json = JSON.stringify(object);
+  let json = JSON.stringify(object); 
 
   console.log(json)
 
    // Send JSON object to the server
-   fetch("https://ens.a2hosted.com/client-control-host/clients", {
+   fetch("https://clientcontrol.911emergensee.com:3333/clients", {
     method: 'POST',
     headers: {
         'Content-Type': 'application/JSON',
@@ -825,7 +825,7 @@ function updateClient(form) {
   console.log(lKey)
 
    // Send JSON object to the server
-   fetch(`https://ens.a2hosted.com/client-control-host/clients/${lKey}`, {
+   fetch(`https://clientcontrol.911emergensee.com:3333/clients/${lKey}`, {
     method: 'PUT',
     headers: {
         'Content-Type': 'application/json',
