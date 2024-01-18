@@ -257,6 +257,23 @@ function newClient() {
       opt.innerHTML += data;
     })
 
+    /* */
+
+    const nwsInputWrap = document.createElement('div');
+    block2.appendChild(nwsInputWrap);
+    nwsInputWrap.className = "inputWrap";
+
+    const nwsLabel = document.createElement('label');
+    nwsInputWrap.appendChild(nwsLabel);
+    nwsLabel.for = "nws";
+    nwsLabel.innerText = "NWS County Code:"
+
+    const nwsInput = document.createElement('input');
+    nwsInputWrap.appendChild(nwsInput);
+    nwsInput.name = "nws";
+    nwsInput.type = "text";
+    nwsInput.setAttribute('id','nws');
+
     /* END Account Controls */
 
     const block3Title = document.createElement('h5');
@@ -1046,6 +1063,23 @@ function fillForm() {
       opt.innerHTML += data;
     })
     planInput.value = `${singleGrab.plan}`;
+
+    /* */
+
+    const nwsInputWrap = document.createElement('div');
+    block2.appendChild(nwsInputWrap);
+    nwsInputWrap.className = "inputWrap";
+
+    const nwsLabel = document.createElement('label');
+    nwsInputWrap.appendChild(nwsLabel);
+    nwsLabel.for = "nws";
+    nwsLabel.innerText = "NWS County Code:"
+
+    const nwsInput = document.createElement('input');
+    nwsInputWrap.appendChild(nwsInput);
+    nwsInput.name = "nws";
+    nwsInput.type = "text";
+    nwsInput.setAttribute('id','nws');
 
     /* END Account Controls */
 
